@@ -1,0 +1,50 @@
+<html>
+<body>
+ <a  href="sfc://mybill" id="mybill" style="display:none">mybill</a>
+ <a  href="sfc://mpesa" id="mpesa" style="display:none">mpesa</a>
+ <a  href="sfc://bonga" id="bongaservices" style="display:none">bonga</a>
+ <a  href="sfc://airtimetopup" id="airtimetopup" style="display:none">airtimetopup</a>
+ <a  href="sfc://data_sms_plans" id="data_sms_plans" style="display:none">data_sms_plans</a>
+ <a  href="sfc://storelocator" id="storelocator" style="display:none">storelocator</a>
+ <a  href="sfc://services" id="services" style="display:none">services</a>
+ <a  href="sfc://myaccount" id="myaccount" style="display:none">myaccount</a>
+ <a  href="sfc://contactus" id="contactus" style="display:none">contactus</a>
+ <a  href="sfc://requestbill" id="requestbill" style="display:none">requestbill</a>
+ <a  href="sfc://redeembonga" id="redeembonga" style="display:none">redeembonga</a>
+ <a  href="sfc://buydata" id="buydata" style="display:none">buydata</a>
+ <a  href="sfc://sendmoney" id="sendmoney" style="display:none">sendmoney</a>
+ <a  href="sfc://cashwithdraw" id="cashwithdraw" style="display:none">cashwithdraw</a>
+ <a  href="sfc://lipanampesa" id="lipanampesa" style="display:none">lipanampesa</a>
+ <a  href="sfc://buyairtime" id="buyairtime" style="display:none">buyairtime</a>
+ <a  href="sfc://loansandsaving" id="loansandsaving" style="display:none">loansandsaving</a>
+ <a  href="sfc://mpesamyaccount" id="mpesamyaccount" style="display:none">mpesamyaccount</a>
+ <a  href="sfc://dataplans" id="dataplans" style="display:none">dataplans</a>
+ <a  href="sfc://smsplans" id="smsplans" style="display:none">smsplans</a>
+ <a  href="sfc://allshops" id="allshops" style="display:none">allshops</a>
+ <a  href="sfc://nearme" id="nearme" style="display:none">nearme</a>
+ <a  href="sfc://roaming" id="roaming" style="display:none">roaming</a>
+ <a  href="sfc://flex" id="flex" style="display:none">flex</a>
+ <a  href="sfc://knowledgebase" id="knowledgebase" style="display:none">knowledgebase</a>
+
+<script>
+var url = window.location.href;
+
+var params = url.split('?');
+
+if(params.length > 1 && params[1] != ''){
+	var callBackId = params[1].split('=');
+	if(callBackId[1] != ''){
+		document.getElementById(callBackId[1]).click();
+	}
+}else{
+	var y = document.getElementsByTagName("a");
+	var i;
+	for (i = 0; i < y.length; i++) {
+	    y[i].style.display = "block";
+	}
+}
+</script>
+
+
+</body>
+</html>
